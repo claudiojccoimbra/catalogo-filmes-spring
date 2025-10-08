@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: catalogo-filmes
+server:
+  port: 8080
