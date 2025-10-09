@@ -7,8 +7,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Optional;
-// src/main/java/com/seuprojeto/catalogo/service/FilmeService.java
-// ...
+
 @Service
 public class FilmeService implements CrudService<Filme, Long> {
 
