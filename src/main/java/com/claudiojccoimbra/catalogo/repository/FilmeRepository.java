@@ -1,6 +1,6 @@
-package com.seuprojeto.catalogo.repository;
+package com.claudiojccoimbra.catalogo.repository;
 
-import com.seuprojeto.catalogo.domain.Filme;
+import com.claudiojccoimbra.catalogo.domain.Filme;
 import java.util.*;
 
 public interface FilmeRepository {

@@ -1,7 +1,7 @@
-package com.seuprojeto.catalogo.repository.mem;
+package com.claudiojccoimbra.catalogo.repository.mem;
 
-import com.seuprojeto.catalogo.domain.Filme;
-import com.seuprojeto.catalogo.repository.FilmeRepository;
+import com.claudiojccoimbra.catalogo.domain.Filme;
+import com.claudiojccoimbra.catalogo.repository.FilmeRepository;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Repository;
 

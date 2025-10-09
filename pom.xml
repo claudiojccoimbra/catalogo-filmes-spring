@@ -9,7 +9,7 @@
     <relativePath/>
   </parent>
 
-  <groupId>com.seuprojeto</groupId>
+  <groupId>com.claudiojccoimbra</groupId>
   <artifactId>catalogo-filmes-spring</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>catalogo-filmes-spring</name>

@@ -1,0 +1,4 @@
+# titulo,ano,duracaoMin
+Toy Story,1995,81
+Procurando Nemo,2003,100
+Up - Altas Aventuras,2009,96

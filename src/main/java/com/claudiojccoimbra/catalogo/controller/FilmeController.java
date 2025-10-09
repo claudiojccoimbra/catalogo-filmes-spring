@@ -1,7 +1,7 @@
-package com.seuprojeto.catalogo.controller;
+package com.claudiojccoimbra.catalogo.controller;
 
-import com.seuprojeto.catalogo.domain.Filme;
-import com.seuprojeto.catalogo.service.FilmeService;
+import com.claudiojccoimbra.catalogo.domain.Filme;
+import com.claudiojccoimbra.catalogo.service.FilmeService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
