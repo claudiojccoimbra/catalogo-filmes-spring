@@ -15,4 +15,4 @@ Endpoints base: `http://localhost:8080/api/v1/filmes`
 - `PUT /{id}` atualiza
 - `DELETE /{id}` remove
 
-Swagger (se ativo): `http://localhost:8080/swagger-ui.html`
+Swagger: `http://localhost:8080/swagger-ui.html`
