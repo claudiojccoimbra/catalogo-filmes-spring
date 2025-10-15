@@ -66,7 +66,7 @@ Exemplo de criação:
 ```
 
 ## Dados de exemplo (loaders)
-Se existirem, são carregados na inicialização:
+são carregados na inicialização:
 ```
 src/main/resources/data/filmes.txt   # titulo;ano;duracaoMin;ativo;sinopse;idioma;classificacao
 src/main/resources/data/series.txt   # titulo;ano;temporadas
