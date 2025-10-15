@@ -1,0 +1,4 @@
+# titulo;ano;duracaoMin;ativo;sinopse;idioma;classificacao
+Toy Story;1995;81;true;Brinquedos ganham vida;PT-BR;Livre
+Up - Altas Aventuras;2009;96;true;Velhinho e casa com balÃµes;PT-BR;Livre
+Wall-E;2008;98;true;RobÃ´ sozinho na Terra;EN;Livre

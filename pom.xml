@@ -13,7 +13,7 @@
   <artifactId>catalogo-filmes-spring</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>catalogo-filmes-spring</name>
-  <description>Feature 1: API REST em memória (Filmes)</description>
+  <description>Feature 1: API REST em memÃ³ria (Filmes)</description>
 
   <properties>
     <java.version>21</java.version>
@@ -49,3 +49,4 @@
     </plugins>
   </build>
 </project>
+

@@ -1,56 +1,28 @@
 package com.claudiojccoimbra.catalogo.domain;
 
-public class Filme {
-    private Long id;
-    private String titulo;
-    private Integer ano;
+public class Filme extends Obra {
     private Integer duracaoMin;
+    private Boolean ativo = true;
+    private DetalhesFilme detalhes;
 
-    public Filme() {
-    }
+    public Filme(){}
 
-    public Filme(Long id, String titulo, Integer ano, Integer duracaoMin) {
-        this.id = id;
-        this.titulo = titulo;
-        this.ano = ano;
+    public Filme(Long id, String titulo, Integer ano, Integer duracaoMin){
+        setId(id); setTitulo(titulo); setAno(ano);
         this.duracaoMin = duracaoMin;
+        this.ativo = true;
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
-    public Integer getAno() {
-        return ano;
-    }
-
-    public void setAno(Integer ano) {
-        this.ano = ano;
-    }
-
-    public Integer getDuracaoMin() {
-        return duracaoMin;
-    }
-
-    public void setDuracaoMin(Integer duracaoMin) {
-        this.duracaoMin = duracaoMin;
-    }
+    public Integer getDuracaoMin() { return duracaoMin; }
+    public void setDuracaoMin(Integer duracaoMin) { this.duracaoMin = duracaoMin; }
+    public Boolean getAtivo() { return ativo; }
+    public void setAtivo(Boolean ativo) { this.ativo = ativo; }
+    public DetalhesFilme getDetalhes() { return detalhes; }
+    public void setDetalhes(DetalhesFilme detalhes) { this.detalhes = detalhes; }
 
     @Override
     public String toString() {
-        return "Filme{id=" + id + ", titulo='" + titulo + "', ano=" + ano +
-                ", duracaoMin=" + duracaoMin + "}";
+        return "Filme{id=" + getId() + ", titulo='" + getTitulo() + "', ano=" + getAno() +
+               ", duracaoMin=" + duracaoMin + ", ativo=" + ativo + "}";
     }
 }

@@ -1,0 +1,4 @@
+# titulo;ano;temporadas
+Breaking Bad;2008;5
+Dark;2017;3
+The Office;2005;9

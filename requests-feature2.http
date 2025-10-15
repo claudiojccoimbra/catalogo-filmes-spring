@@ -1,0 +1,30 @@
+### === FILMES ===
+POST http://localhost:8080/api/v1/filmes
+Content-Type: application/json
+
+{
+  "titulo": "Toy Story 2",
+  "ano": 1999,
+  "duracaoMin": 92,
+  "detalhes": { "sinopse": "ContinuaÃ§Ã£o", "idioma": "PT-BR", "classificacao": "Livre" }
+}
+
+PATCH http://localhost:8080/api/v1/filmes/1/inativar
+
+GET http://localhost:8080/api/v1/filmes
+
+### === SERIES ===
+POST http://localhost:8080/api/v1/series
+Content-Type: application/json
+
+{ "titulo": "Loki", "ano": 2021, "temporadas": 2 }
+
+GET http://localhost:8080/api/v1/series
+
+### === ESTUDIOS ===
+POST http://localhost:8080/api/v1/estudios
+Content-Type: application/json
+
+{ "nome": "Pixar" }
+
+GET http://localhost:8080/api/v1/estudios
