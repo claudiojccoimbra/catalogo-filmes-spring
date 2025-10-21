@@ -8,7 +8,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicLong;
 
 @Repository
-@Profile({ "default", "mem" })
+@Profile("mem")
 public class DetalhesFilmeRepositoryMem implements DetalhesFilmeRepository {
     private final Map<Long,DetalhesFilme> db = new ConcurrentHashMap<>();
     private final AtomicLong seq = new AtomicLong(0);
@@ -18,3 +18,4 @@ public class DetalhesFilmeRepositoryMem implements DetalhesFilmeRepository {
     @Override public void deleteById(Long id){ db.remove(id); }
     @Override public boolean existsById(Long id){ return db.containsKey(id); }
 }
+

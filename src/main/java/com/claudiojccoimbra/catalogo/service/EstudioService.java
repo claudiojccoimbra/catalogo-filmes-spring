@@ -11,13 +11,13 @@ public class EstudioService {
     public EstudioService(EstudioRepository repo){ this.repo = repo; }
     public Estudio incluir(Estudio e){
         if(e.getNome()==null || e.getNome().isBlank())
-            throw new IllegalArgumentException("Nome Ã© obrigatÃ³rio");
+            throw new IllegalArgumentException("Nome ÃƒÆ’Ã‚Â© obrigatÃƒÆ’Ã‚Â³rio");
         if(repo.existsByNomeIgnoreCase(e.getNome()))
-            throw new IllegalArgumentException("EstÃºdio jÃ¡ existe");
+            throw new IllegalArgumentException("EstÃƒÆ’Ã‚Âºdio jÃƒÆ’Ã‚Â¡ existe");
         return repo.save(e);
     }
     public List<Estudio> listarTodos(){ return repo.findAll(); }
-    public Estudio buscarPorId(Long id){ return repo.findById(id).orElseThrow(() -> new NoSuchElementException("EstÃºdio nÃ£o encontrado")); }
+    public Estudio buscarPorId(Long id){ return repo.findById(id).orElseThrow(() -> new NoSuchElementException("EstÃƒÆ’Ã‚Âºdio nÃƒÆ’Ã‚Â£o encontrado")); }
     public Estudio alterar(Long id, Estudio e){
         Estudio atual = buscarPorId(id);
         atual.setNome(e.getNome());

@@ -11,9 +11,9 @@ public class SerieService implements CrudService<Serie, Long> {
     private final SerieRepository repo;
     public SerieService(SerieRepository repo){ this.repo = repo; }
     private void validar(Serie s){
-        if(s==null) throw new IllegalArgumentException("SÃ©rie nula");
+        if(s==null) throw new IllegalArgumentException("SÃƒÆ’Ã‚Â©rie nula");
         if(s.getTitulo()==null || s.getTitulo().isBlank())
-            throw new IllegalArgumentException("TÃ­tulo Ã© obrigatÃ³rio");
+            throw new IllegalArgumentException("TÃƒÆ’Ã‚Â­tulo ÃƒÆ’Ã‚Â© obrigatÃƒÆ’Ã‚Â³rio");
     }
     @Override public Serie incluir(Serie s){ validar(s); return repo.save(s); }
     @Override public Serie alterar(Long id, Serie s){

@@ -1,7 +1,13 @@
 package com.claudiojccoimbra.catalogo.domain;
 
+import jakarta.persistence.*;
+
+@MappedSuperclass
 public abstract class Obra {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String titulo;
     private Integer ano;
 

@@ -8,7 +8,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicLong;
 
 @Repository
-@Profile({ "default", "mem" })
+@Profile("mem")
 public class EstudioRepositoryMem implements EstudioRepository {
     private final Map<Long,Estudio> db = new ConcurrentHashMap<>();
     private final AtomicLong seq = new AtomicLong(0);
@@ -20,3 +20,4 @@ public class EstudioRepositoryMem implements EstudioRepository {
         return db.values().stream().anyMatch(x -> x.getNome()!=null && x.getNome().equalsIgnoreCase(nome));
     }
 }
+

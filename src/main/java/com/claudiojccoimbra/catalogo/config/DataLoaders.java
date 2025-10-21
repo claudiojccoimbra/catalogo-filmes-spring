@@ -44,7 +44,10 @@ public class DataLoaders {
                     series.incluir(s);
                 });
             }
-            System.out.println("[Loader] SÃ©ries carregadas: " + series.listarTodos().size());
+             System.out.println("[Loader] Séries carregadas: " + series.listarTodos().size());
+
         };
     }
+
+    
 }

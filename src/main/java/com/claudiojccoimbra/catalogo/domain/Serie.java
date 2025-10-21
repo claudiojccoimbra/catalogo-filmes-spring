@@ -1,5 +1,9 @@
 package com.claudiojccoimbra.catalogo.domain;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "series")
 public class Serie extends Obra {
     private Integer temporadas;
 

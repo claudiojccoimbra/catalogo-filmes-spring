@@ -1,4 +1,9 @@
 package com.claudiojccoimbra.catalogo.exception;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ResponseStatus;
+
+@ResponseStatus(HttpStatus.NOT_FOUND)
 public class SerieNaoEncontradaException extends RuntimeException {
-    public SerieNaoEncontradaException(Long id){ super("SÃ©rie nÃ£o encontrada: id=" + id); }
+    public SerieNaoEncontradaException(Long id){ super("SÃƒÂ©rie nÃƒÂ£o encontrada: id=" + id); }
 }

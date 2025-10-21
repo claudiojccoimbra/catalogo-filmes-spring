@@ -1,18 +1,23 @@
 package com.claudiojccoimbra.catalogo.domain;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "filmes")
 public class Filme extends Obra {
     private Integer duracaoMin;
     private Boolean ativo = true;
+
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "detalhes_id", unique = true)
     private DetalhesFilme detalhes;
 
     public Filme(){}
-
     public Filme(Long id, String titulo, Integer ano, Integer duracaoMin){
         setId(id); setTitulo(titulo); setAno(ano);
         this.duracaoMin = duracaoMin;
         this.ativo = true;
     }
-
     public Integer getDuracaoMin() { return duracaoMin; }
     public void setDuracaoMin(Integer duracaoMin) { this.duracaoMin = duracaoMin; }
     public Boolean getAtivo() { return ativo; }

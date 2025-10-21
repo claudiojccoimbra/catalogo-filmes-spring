@@ -1,7 +1,14 @@
 package com.claudiojccoimbra.catalogo.domain;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "estudios")
 public class Estudio {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String nome;
 
     public Estudio(){}
