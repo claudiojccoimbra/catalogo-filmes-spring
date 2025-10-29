@@ -2,15 +2,16 @@
   profiles:
     active: jpa
 
-  h2:
-    console:
-      enabled: true
-
   datasource:
-    url: jdbc:h2:mem:catalogo;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    url: jdbc:h2:mem:catalogo;DB_CLOSE_DELAY=-1
     driver-class-name: org.h2.Driver
     username: sa
     password:
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
 
   jpa:
     hibernate:
@@ -18,3 +19,10 @@
     show-sql: true
     properties:
       hibernate.format_sql: true
+    open-in-view: false
+
+server:
+  error:
+    include-message: always
+    include-binding-errors: always
+    include-exception: true

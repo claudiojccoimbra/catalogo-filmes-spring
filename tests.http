@@ -1,0 +1,35 @@
+@host = http://localhost:8080
+@ct = application/json
+
+### Criar filme
+# @name criarFilme
+POST {{host}}/api/v1/filmes
+Content-Type: {{ct}}
+Accept: {{ct}}
+
+{
+  "titulo": "Toy Story 2",
+  "ano": 1999,
+  "duracaoMin": 92,
+  "detalhes": { "sinopse": "Continuação", "idioma": "PT-BR", "classificacao": "Livre" }
+}
+
+# Depois de ENVIAR o bloco acima
+@filmeId = {{criarFilme.response.body.$.id}}
+
+### Criar avaliação válida
+POST {{host}}/api/v1/avaliacoes
+Content-Type: {{ct}}
+Accept: {{ct}}
+
+{
+  "filmeId": {{filmeId}},
+  "autorEmail": "ana@example.com",
+  "nota": 9,
+  "comentario": "Ótimo!",
+  "data": "2024-10-01"
+}
+
+### Listar avaliações por filme
+GET {{host}}/api/v1/avaliacoes/filme/{{filmeId}}
+Accept: {{ct}}

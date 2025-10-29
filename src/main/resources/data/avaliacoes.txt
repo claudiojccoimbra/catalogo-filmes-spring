@@ -1,0 +1,4 @@
+# tituloFilme;autorEmail;nota;comentario;data(YYYY-MM-DD)
+Toy Story 2;ana@example.com;9;Muito bom;2021-10-10
+Toy Story 2;bob@example.com;8;Divertido;2022-01-01
+

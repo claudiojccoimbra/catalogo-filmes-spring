@@ -2,3 +2,4 @@
 Toy Story;1995;81;true;Brinquedos ganham vida;PT-BR;Livre
 Up - Altas Aventuras;2009;96;true;Velhinho e casa com balÃµes;PT-BR;Livre
 Wall-E;2008;98;true;RobÃ´ sozinho na Terra;EN;Livre
+Toy Story 2;1999;92;true;Continuação;PT-BR;Livre
