@@ -1,6 +1,10 @@
 @host = http://localhost:8080
 @ct = application/json
 
+### Listar filmes (baseline)
+GET {{host}}/api/v1/filmes
+Accept: {{ct}}
+
 ### Criar filme
 # @name criarFilme
 POST {{host}}/api/v1/filmes
@@ -14,7 +18,7 @@ Accept: {{ct}}
   "detalhes": { "sinopse": "Continuação", "idioma": "PT-BR", "classificacao": "Livre" }
 }
 
-# Depois de ENVIAR o bloco acima
+# Envie o bloco acima antes dos próximos (para popular {{filmeId}})
 @filmeId = {{criarFilme.response.body.$.id}}
 
 ### Criar avaliação válida
@@ -30,6 +34,29 @@ Accept: {{ct}}
   "data": "2024-10-01"
 }
 
+### Criar avaliação inválida (nota fora do range) — espera 400
+POST {{host}}/api/v1/avaliacoes
+Content-Type: {{ct}}
+Accept: {{ct}}
+
+{
+  "filmeId": {{filmeId}},
+  "autorEmail": "ana@example.com",
+  "nota": 11,
+  "comentario": "fora do range",
+  "data": "2024-10-01"
+}
+
 ### Listar avaliações por filme
 GET {{host}}/api/v1/avaliacoes/filme/{{filmeId}}
+Accept: {{ct}}
+
+### Buscar avaliações por parte do título e nota mínima
+# exemplo: titulo=toy, notaMin=8
+GET {{host}}/api/v1/avaliacoes/buscar-por-titulo-e-nota?titulo=toy&notaMin=8
+Accept: {{ct}}
+
+### Buscar avaliações por domínio de e-mail
+# encode de @ = %40
+GET {{host}}/api/v1/avaliacoes/buscar-por-dominio-email?dominio=%40example.com
 Accept: {{ct}}
